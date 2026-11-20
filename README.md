@@ -1,10 +1,10 @@
 # SteamRelief
 
-SteamRelief is a Windows tray app that reduces the resident memory used by Steam's Chromium WebHelpers while Steam is in the background. This fork of [Fooly-Cooly's SteamRelief](https://github.com/Fooly-Cooly/SteamRelief) uses native Windows process APIs and keeps watching across Steam and WebHelper restarts.
+SteamRelief is a Windows tray app that reduces the resident memory used by Steam's Chromium WebHelpers while Steam is in the background. It uses native Windows process APIs and keeps watching across Steam and WebHelper restarts.
 
-## Download and update
+## Install and update
 
-Download the **Windows x64** ZIP for 64-bit Windows or the **Windows x86** ZIP for 32-bit Windows from the [latest release](https://github.com/C1yHAX/SteamRelief/releases/latest). Extract it to a permanent folder and run `SteamRelief.exe`. The executable includes its AutoHotkey runtime.
+Follow the [build instructions](#build-from-source) for your Windows architecture. Place `SteamRelief.exe` and `SteamRelief.ini` in a permanent folder and run the EXE. It includes its AutoHotkey runtime.
 
 To update an existing installation, exit SteamRelief from the tray and replace its EXE in the same folder. Keep your existing `SteamRelief.ini` to preserve your settings. Missing keys use the defaults below. An existing startup shortcut will continue to use that location.
 
@@ -31,6 +31,6 @@ Edit `SteamRelief.ini` next to the executable, then exit and relaunch SteamRelie
 
 ## Build from source
 
-The release uses [AutoHotkey v1.1.37.02](https://github.com/AutoHotkey/AutoHotkey/releases/tag/v1.1.37.02) and its bundled Ahk2Exe compiler. With a portable installation, set `AHK_DIR` to the folder that contains `Compiler`. Run `make.bat x64` or `make.bat x86` to build `SteamRelief.exe` next to the script. To run the scripts directly, open `SteamRelief.ahk` with Unicode AutoHotkey v1.1.33 or later in the v1 series and keep `SteamProcesses.ahk` alongside it.
+Use [AutoHotkey v1.1.37.02](https://github.com/AutoHotkey/AutoHotkey/releases/tag/v1.1.37.02) and its bundled Ahk2Exe compiler. With a portable installation, set `AHK_DIR` to the folder that contains `Compiler`. Run `make.bat x64` or `make.bat x86` to build `SteamRelief.exe` next to the script. To run the scripts directly, open `SteamRelief.ahk` with Unicode AutoHotkey v1.1.33 or later in the v1 series and keep `SteamProcesses.ahk` alongside it.
 
-SteamRelief is distributed under the [GNU GPL v3](LICENSE). The portable packages include the license for the bundled AutoHotkey runtime. Its corresponding source is available at the [AutoHotkey v1.1.37.02 tag](https://github.com/AutoHotkey/AutoHotkey/tree/v1.1.37.02).
+SteamRelief is distributed under the [GNU GPL v3](LICENSE). The source and license for the bundled runtime are available in the [AutoHotkey v1.1.37.02 source tree](https://github.com/AutoHotkey/AutoHotkey/tree/v1.1.37.02).
